@@ -83,18 +83,25 @@ $(function(){
 
     /* con4 : service 마우스 올리면 나오는 효과 */
 
-    $('.con4-content-list-box').mouseover(function(){
-        $(this).siblings('.con4-content-list-title').css({display:'none'});
-        $(this).siblings('.con4-content-list-text').addClass('on');
-        $(this).addClass('on');
-       
+    $(window).resize(function() {
+        if($(window).width() > 1220) {
+            $('.con4-content-list-box').mouseover(function(){
+                $(this).siblings('.con4-content-list-title').css({display:'none'});
+                $(this).siblings('.con4-content-list-text').addClass('on');
+                $(this).addClass('on');
+               
+            })
+        
+            $('.con4-content-list-box').mouseout(function(){
+                $(this).siblings('.con4-content-list-title').css({display:'block'});
+                $(this).siblings('.con4-content-list-text').removeClass('on');  
+                $(this).removeClass('on');
+            })
+        } 
     })
+    .resize();
 
-    $('.con4-content-list-box').mouseout(function(){
-        $(this).siblings('.con4-content-list-title').css({display:'block'});
-        $(this).siblings('.con4-content-list-text').removeClass('on');  
-        $(this).removeClass('on');
-    })
+    
 
 
     /* con5 : business 항목 슬라이드 */
