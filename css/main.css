@@ -2213,7 +2213,7 @@ body {
     padding-top: 10px;
   }
   .wrap header .logo a img {
-    width: 7vw;
+    width: 10vw;
   }
   .wrap header .ham-wrap {
     width: 30px;
@@ -2436,7 +2436,7 @@ body {
   .wrap .con2 .con2-inner h3 {
     color: #ccc;
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 70px;
   }
   .wrap .con2 .con2-inner h3 .con2-text1.on {
@@ -2497,11 +2497,11 @@ body {
        object-fit: cover;
   }
   .wrap .con3 .bar {
-    width: 300vw;
+    width: 350vw;
     height: 70px;
     background: #e6e6e6;
     box-shadow: 1.5px 1.5px 4px 4px #f4f4f4;
-    transform: rotate(-24deg) translate(-3%, 40%);
+    transform: rotate(-24deg) translate(-3%, 0%);
     display: flex;
     align-items: center;
     position: relative;
@@ -2635,7 +2635,7 @@ body {
     opacity: 1;
   }
   .wrap .con4 .con4-right .con4-content-list li .con4-content-list-text h4 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 800;
   }
   .wrap .con4 .con4-right .con4-content-list li .con4-content-list-text h4 span {
@@ -2932,7 +2932,7 @@ body {
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap p {
     color: #555;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 60px;
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap p .con6-text1.on {
@@ -2974,7 +2974,7 @@ body {
     opacity: 1 !important;
   }
   .wrap .con7 .con7-inner {
-    padding: 150px 10% 200px 15%;
+    padding: 150px 10% 200px 13%;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -3013,6 +3013,7 @@ body {
     position: relative;
     z-index: 10;
     margin-bottom: 20px;
+    white-space: nowrap;
   }
   .wrap .con7 .con7-inner .content-wrap h3 .line {
     width: 120%;
@@ -3027,7 +3028,7 @@ body {
     z-index: -10;
   }
   .wrap .con7 .con7-inner .content-wrap p {
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.8;
   }
   .wrap .con7 .con7-inner .content-wrap .btn {

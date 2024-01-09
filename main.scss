@@ -2395,7 +2395,7 @@ body{
       padding-top:10px;
       a{
         img{
-          width:7vw;
+          width:10vw;
         }
       }
     }
@@ -2632,7 +2632,7 @@ body{
       h3 {
         color: #ccc;
         text-align: center;
-        font-size: 40px;
+        font-size: 36px;
         margin-bottom: 70px;
         .con2-text1.on {
           color: #111;
@@ -2700,11 +2700,11 @@ body{
       }
     }
     .bar {
-      width: 300vw;
+      width: 350vw;
       height: 70px;
       background:#e6e6e6;
       box-shadow:1.5px 1.5px 4px 4px #f4f4f4;
-      transform: rotate(-24deg) translate(-3%,40%);
+      transform: rotate(-24deg) translate(-3%,0%);
       display: flex;
       align-items: center;
       position:relative;
@@ -2864,7 +2864,7 @@ body{
             //   transition:0.7s;
             // }
             h4 {
-              font-size: 16px;
+              font-size: 15px;
               font-weight:800;
               span{
                 font-weight:600;
@@ -3193,7 +3193,7 @@ body{
           }
           p{
             color:#555;
-            font-size:18px;
+            font-size:16px;
             margin-bottom:60px;
             .con6-text1.on{
               color:#fff!important;
@@ -3243,7 +3243,7 @@ body{
       opacity:1!important;
     }
     .con7-inner{
-      padding:150px 10% 200px 15%;
+      padding:150px 10% 200px 13%;
       color:#fff;
       display:flex;
       justify-content:center;
@@ -3282,6 +3282,7 @@ body{
           position:relative;
           z-index:10;
           margin-bottom:20px;
+          white-space:nowrap;
           
           .line{
             width: 120%;
@@ -3297,7 +3298,7 @@ body{
           }
         }
         p{
-          font-size:14px;
+          font-size:13px;
           opacity:0.8;
         }
         .btn{
