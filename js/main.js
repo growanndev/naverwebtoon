@@ -316,9 +316,18 @@ $(function(){
         
                 }
             } 
-            // else {
-            // // window 크기가 1220보다 클때 실행문
-            // }
+            else if($(window).width() < 768) {
+                if(scroll > con3 - 1500 ){
+                    $('.slide1').css({
+                        left: -400 + scroll/3+'px'
+                    })
+                    $('.bar').css({
+                        right:scroll/4+'px'
+                    })
+        
+                }
+            } 
+            
         })
         .resize();
 
