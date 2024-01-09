@@ -334,6 +334,7 @@ $(function(){
         /* con4 service li 스크롤에 따라 오른쪽으로 */
 
 
+        //pc 사이즈 1220
         $(window).resize(function() {
             if($(window).width() > 1220) {
                 if(scroll > con4 - 2000){
@@ -341,7 +342,7 @@ $(function(){
                         left: scroll/16 + 'px'
                     })
                     $('.con4-content-list li').eq(1).css({
-                        left: scroll/10 + 'px'
+                        left: scroll/12 + 'px'
                     });
         
                     //13
