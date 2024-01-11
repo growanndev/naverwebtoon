@@ -25,10 +25,6 @@ a {
 }
 
 /* color */
-html, body {
-  overflow-x: hidden;
-}
-
 /* pc */
 /* pc */
 /* pc */
@@ -426,7 +422,7 @@ html, body {
     color: #111;
   }
   .wrap .con2 .con2-inner p {
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     color: #ccc;
     height: 0px;
@@ -694,7 +690,7 @@ html, body {
     transition: 1s 0.3s;
   }
   .wrap .con5 .con5-inner p {
-    font-size: 22px;
+    font-size: 21px;
   }
   .wrap .con5 .con5-inner p:nth-of-type(1) {
     margin: 0px;

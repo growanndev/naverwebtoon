@@ -31,9 +31,7 @@ $green: #03c75a;
 // $green: #00d564;
 
 
-html,body{
-  overflow-x:hidden;
-}
+
 
 /* pc */
 /* pc */
@@ -440,7 +438,7 @@ html,body{
         }
       }
       p {
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
         color: #ccc;
         height: 0px;
@@ -752,7 +750,7 @@ html,body{
         }
       }
       p{
-        font-size:22px;
+        font-size:21px;
         &:nth-of-type(1){
           margin:0px;
           display:flex;
