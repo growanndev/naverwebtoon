@@ -3,6 +3,9 @@ $(function(){
     // $(document).ready(function(){
     //     $(window).scrollTop(0);
     // })
+
+
+  
     
 
     /* loading page, con1 이어지는 효과 */
