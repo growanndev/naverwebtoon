@@ -2621,7 +2621,7 @@ $green: #03c75a;
   .con2 {
     height: 2400px;
     position: relative;
-    padding: 200px 0px;
+    padding: 200px 0px 0px;
     
     .con2-inner {
       position: sticky;
@@ -2721,7 +2721,7 @@ $green: #03c75a;
     .con4-left {
       width: 35%;
       // background: #f7f7fb;
-      padding: 200px 0px;
+      padding: 150px 0px;
       position: relative;
       .con4-left-inner {
         position: sticky;
@@ -2737,7 +2737,7 @@ $green: #03c75a;
         }
         >p{
           text-align:right;
-          font-size:24px;
+          font-size:18px;
           color:#555;
           transform:translateX(-17%);
           .con4-num{
@@ -2750,7 +2750,7 @@ $green: #03c75a;
     /* service 오른쪽 콘텐츠 */
     .con4-right {
       width: 65%;
-      padding: 200px 0px 200px 10%;
+      padding: 150px 0px 150px 10%;
       .con4-content-list {
         perspective: 1000px;
         display: flex;
@@ -2965,6 +2965,9 @@ $green: #03c75a;
           display:inline-block;
           margin-bottom:12px;
           font-weight:900;
+        }
+        .mo-none{
+          display:none;
         }
       }
       .busi1-list{
@@ -3241,7 +3244,7 @@ $green: #03c75a;
       opacity:1!important;
     }
     .con7-inner{
-      padding:150px 10% 200px 13%;
+      padding:150px 10% 150px 13%;
       color:#fff;
       display:flex;
       justify-content:center;

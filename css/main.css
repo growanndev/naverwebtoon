@@ -2422,7 +2422,7 @@ a {
   .wrap .con2 {
     height: 2400px;
     position: relative;
-    padding: 200px 0px;
+    padding: 200px 0px 0px;
   }
   .wrap .con2 .con2-inner {
     position: sticky;
@@ -2515,7 +2515,7 @@ a {
   }
   .wrap .con4 .con4-left {
     width: 35%;
-    padding: 200px 0px;
+    padding: 150px 0px;
     position: relative;
   }
   .wrap .con4 .con4-left .con4-left-inner {
@@ -2533,7 +2533,7 @@ a {
   }
   .wrap .con4 .con4-left .con4-left-inner > p {
     text-align: right;
-    font-size: 24px;
+    font-size: 18px;
     color: #555;
     transform: translateX(-17%);
   }
@@ -2542,7 +2542,7 @@ a {
   }
   .wrap .con4 .con4-right {
     width: 65%;
-    padding: 200px 0px 200px 10%;
+    padding: 150px 0px 150px 10%;
   }
   .wrap .con4 .con4-right .con4-content-list {
     perspective: 1000px;
@@ -2720,6 +2720,9 @@ a {
     display: inline-block;
     margin-bottom: 12px;
     font-weight: 900;
+  }
+  .wrap .con5 .con5-inner p .mo-none {
+    display: none;
   }
   .wrap .con5 .con5-inner .busi1-list {
     display: flex;
@@ -2970,7 +2973,7 @@ a {
     opacity: 1 !important;
   }
   .wrap .con7 .con7-inner {
-    padding: 150px 10% 200px 13%;
+    padding: 150px 10% 150px 13%;
     color: #fff;
     display: flex;
     justify-content: center;
