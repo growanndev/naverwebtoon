@@ -30,7 +30,9 @@ a {
 $green: #03c75a;
 // $green: #00d564;
 
-
+body{
+  overflow-x:hidden;
+}
 
 
 /* pc */
@@ -3142,7 +3144,7 @@ $green: #03c75a;
     background:#111;
     .con6-inner{
       height:100vh;
-      padding:18vh 0px;
+      padding:100px 0px;
       position:sticky;
       top:0px;
       >h2{
@@ -3164,7 +3166,7 @@ $green: #03c75a;
           width:60%;
           height:60vw;
           height:250px;
-          border-radius:40px;
+          border-radius:30px;
           overflow:hidden;
           transition:2s;
           &.on{
@@ -3258,7 +3260,7 @@ $green: #03c75a;
         transition:0.5s 0.3s;
         transform:rotate(180deg);
         h2{
-          font-size: 100px;
+          font-size: 90px;
           font-weight: 700; 
           position:relative;
           top:300px;
