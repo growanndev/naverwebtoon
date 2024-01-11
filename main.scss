@@ -3145,11 +3145,14 @@ body{
     position:relative;
     height:3500px;
     background:#111;
+    padding:500px 0px;
     .con6-inner{
-      height:100vh;
-      padding:100px 0px;
+      // height:100vh;
+      // padding:500px 0px;
       position:sticky;
-      top:0px;
+      top:50%;
+      transform:translateY(-50%);
+      // transform:translateY(-50%);
       >h2{
         width:70%;
         margin:0px auto 50px;

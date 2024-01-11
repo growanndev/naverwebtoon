@@ -2879,12 +2879,12 @@ body {
     position: relative;
     height: 3500px;
     background: #111;
+    padding: 500px 0px;
   }
   .wrap .con6 .con6-inner {
-    height: 100vh;
-    padding: 100px 0px;
     position: sticky;
-    top: 0px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .wrap .con6 .con6-inner > h2 {
     width: 70%;
