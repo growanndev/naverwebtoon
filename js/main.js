@@ -1,4 +1,7 @@
+
 $(function(){
+
+    
 
     /* loading page, con1 이어지는 효과 */
 
@@ -311,8 +314,16 @@ $(function(){
                     $('.con4-content-list li').eq(2).css({
                         left: scroll/20 + 'px'
                     })
+
+
+                    $('.con4-content-list-title').css({display:'block'})
                     
                 }
+            }
+            else{
+                $('.con4-content-list li').css({
+                    left:'0px'
+                });
             } 
         })
         .resize();

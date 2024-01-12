@@ -1597,7 +1597,7 @@ body {
     font-size: 20px;
     transform: rotate(90deg);
     white-space: nowrap;
-    display: none;
+    display: none !important;
   }
   .wrap .con4 .con4-right .con4-content-list li .con4-content-list-text {
     color: #fff;
@@ -2188,7 +2188,7 @@ body {
     padding-top: 10px;
   }
   .wrap header .logo a img {
-    width: 8vw;
+    width: 10vw;
   }
   .wrap header .ham-wrap {
     width: 30px;
@@ -2522,7 +2522,7 @@ body {
     perspective: 1000px;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 80px;
   }
   .wrap .con4 .con4-right .con4-content-list li {
     position: relative;
@@ -2597,7 +2597,7 @@ body {
     font-size: 24px;
     transform: rotate(90deg);
     white-space: nowrap;
-    display: none;
+    display: none !important;
   }
   .wrap .con4 .con4-right .con4-content-list li .con4-content-list-text {
     color: #fff;
@@ -2619,7 +2619,7 @@ body {
     opacity: 0.5;
   }
   .wrap .con4 .con4-right .con4-content-list li .con4-content-list-text p {
-    font-size: 12px;
+    font-size: 2vw;
     transition: 0.7s;
     opacity: 0.8;
   }
@@ -2858,7 +2858,7 @@ body {
   }
   .wrap .con6 .con6-inner > h2 {
     width: 70%;
-    margin: 0px auto 50px;
+    margin: 0px auto 30px;
     font-size: 40px;
     font-weight: 800;
     color: #fff;
@@ -2874,8 +2874,7 @@ body {
   }
   .wrap .con6 .con6-inner .con6-content-wrap .video-wrap {
     width: 60%;
-    height: 60vw;
-    height: 250px;
+    height: 200px;
     border-radius: 30px;
     overflow: hidden;
     transition: 2s;
@@ -2908,7 +2907,7 @@ body {
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap p {
     color: #555;
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 60px;
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap p .con6-text1.on {
