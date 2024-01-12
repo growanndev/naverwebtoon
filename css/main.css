@@ -2606,7 +2606,7 @@ body {
   }
   .wrap .con4 .con4-right .con4-content-list li .con4-content-list-text h4 {
     font-size: 15px;
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     font-weight: 800;
   }
   .wrap .con4 .con4-right .con4-content-list li .con4-content-list-text h4 span {
@@ -2620,7 +2620,7 @@ body {
     opacity: 0.5;
   }
   .wrap .con4 .con4-right .con4-content-list li .con4-content-list-text p {
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     transition: 0.7s;
     opacity: 0.8;
   }
@@ -2853,7 +2853,7 @@ body {
   }
   .wrap .con6 .con6-inner {
     position: sticky;
-    padding: 250px 0px 0px;
+    padding: 200px 0px 0px;
     top: 0px;
   }
   .wrap .con6 .con6-inner > h2 {
