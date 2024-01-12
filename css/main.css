@@ -2622,6 +2622,7 @@ body {
     font-size: 12px;
     transition: 0.7s;
     opacity: 0.8;
+    display: none;
   }
   .wrap .con5 {
     padding: 100px 0px;
