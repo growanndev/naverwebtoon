@@ -1,13 +1,5 @@
 $(function(){
 
-    // $(document).ready(function(){
-    //     $(window).scrollTop(0);
-    // })
-
-
-  
-    
-
     /* loading page, con1 이어지는 효과 */
 
     setTimeout(function(){
@@ -37,7 +29,7 @@ $(function(){
     },3300)
 
 
-    /* 메뉴바 누르면 나오는 메뉴페이지 */
+    /* 햄버거바 누르면 나오는 메뉴페이지 */
     let hamClick = 0;
 
     $('.ham-wrap').click(function(){
@@ -84,7 +76,7 @@ $(function(){
     })
 
 
-    /* con4 : service 마우스 올리면 나오는 효과 */
+    /* pc버전, con4 : service 마우스 올리면 나오는 효과 */
 
     $(window).resize(function() {
         if($(window).width() > 1220) {
@@ -105,34 +97,8 @@ $(function(){
     .resize();
 
     
-
-
-    /* con5 : business 항목 슬라이드 */
-
-    let i = 0;
-    let slide_length = $('.con5 .slide-wrap ul li').length;
     
-    function slide(){
-        if(i == slide_length - 1){
-            $('.con5 .slide-wrap>ul').stop().animate({top:-100*i + '%'},500,function(){
-                $('.con5 .slide-wrap>ul').css({top:0 + '%'})
-            })
-            i = 1;
-            
-        }
-
-        else{
-            $('.con5 .slide-wrap>ul').stop().animate({top:-100*i + '%'},500)
-            i++;
-        }
-    }
-
-    setInterval(slide,1500);
-    
-
-
-
-    /* con5 : business mouseover 했을 때 */
+    /* con5 : business 두번째 항목 mouseover 했을 때 */
 
     $('.busi2-list li:nth-of-type(1)').mouseover(function(){
         $('.busi2-list li').removeClass('on2');
@@ -150,22 +116,11 @@ $(function(){
     })
 
    
-
-    /* con7 contact 효과 */
-
-    function bounce(){
-        $('.con7-inner .title-wrap h2').stop().animate({top:"30px"},500,"easeOutQuint",function(){
-            $('.con7-inner .title-wrap h2').stop().animate({top:"0px"},500,"easeOutBounce");
-        });
-    }
-
-    // setInterval(bounce, 2000);
    
 
 
 
 
-     
 
 
     /* 스크롤 이벤트 */
@@ -183,9 +138,10 @@ $(function(){
         let con7 = $('.con7').offset().top;
 
 
+        /* 스크롤하면 헤더 나옴 */
         $('header').stop().animate({opacity:1},100);
 
-        /* 메뉴 누르면 해당하는 위치로 이동 */
+        /* 햄버거바 메뉴 누르면 해당하는 위치로 이동 */
         $('.menu-list li').click(function(){
             $('.ham-wrap').removeClass('on');
             $('.menu-inner').removeClass('on');
@@ -221,8 +177,6 @@ $(function(){
 
         /* 햄버거바 색상 변화 */
 
-        // console.log(con3); // 3384
-        // console.log(scroll);
         if(scroll < con2){
             $('.ham-wrap').removeClass('black');
         }
@@ -295,7 +249,7 @@ $(function(){
 
 
 
-        /* con3 슬라이드 */
+        /* con3 웹툰 슬라이드 */
 
         if(scroll > con3 - 1500 ){
             $('.slide1').css({
@@ -307,6 +261,7 @@ $(function(){
 
         }
 
+        /* 태블릿 버전, 웹툰 슬라이드  */
         $(window).resize(function() {
             if($(window).width() < 1220 && $(window).width() > 768) {
                 if(scroll > con3 - 1500 ){
@@ -319,6 +274,8 @@ $(function(){
         
                 }
             } 
+
+            
             else if($(window).width() < 768) {
                 if(scroll > con3 - 1500 ){
                     $('.slide1').css({
@@ -334,10 +291,12 @@ $(function(){
         })
         .resize();
 
+
+
+
         /* con4 service li 스크롤에 따라 오른쪽으로 */
 
-
-        //pc 사이즈 1220
+        //pc 
         $(window).resize(function() {
             if($(window).width() > 1220) {
                 if(scroll > con4 - 2000){
@@ -415,12 +374,10 @@ $(function(){
         }
 
         if(scroll > con6 + 800){
-            // $('.con6 .text-wrap').css({display:'flex'});
             $('.con6 .text-wrap').addClass('on');
 
         }
         else{
-            // $('.con6 .text-wrap').css({display:'none'});
             $('.con6 .text-wrap').removeClass('on');
 
         }

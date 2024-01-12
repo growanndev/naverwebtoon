@@ -22,13 +22,12 @@ a {
 
 * {
   font-family: "NanumSquare", sans-serif;
-  // font-weight: 400;
   word-break:keep-all;
 }
 
 /* color */
 $green: #03c75a;
-// $green: #00d564;
+
 
 body{
   overflow-x:hidden;
@@ -50,13 +49,13 @@ body{
     padding: 15px;
     display: flex;
     justify-content: center;
-    gap: 2vw;
+    gap: 1vw;
     align-items: center;
     border-radius: 30px;
     background: rgba(255, 255, 255, 1);
     transition: 0.8s;
     span {
-      font-size: 18px;
+      font-size: 16px;
       color: #03c75a;
       font-weight: 700;
     }
@@ -197,6 +196,7 @@ body{
         }
       }
     }
+    /* 햄버거바 */
     .ham-wrap{
       width:45px;
       height:30px;
@@ -316,17 +316,6 @@ body{
       height: 100vh;
       object-fit: cover;
       position: relative;
-      &::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 20;
-        top: 0px;
-        left: 0px;
-        background: rgba(0, 0, 0);
-        /* 가상요소 적용되지 않음 */
-      }
     }
     /* 어두운 배경*/
     .bg {
@@ -386,11 +375,6 @@ body{
           border-radius: 30px;
           background: rgba(255, 255, 255, 1);
           transition: 0.8s;
-          span {
-            font-size: 18px;
-            color: #03c75a;
-            font-weight: 700;
-          }
           img {
             width: 20px;
             display: none;
@@ -466,6 +450,7 @@ body{
   /* 웹툰 슬라이드 con3 */
   .con3 {
     margin-bottom: 150px;
+    /* 웹툰 이미지 슬라이드 */
     ul {
       width: 200vw;
       display: flex;
@@ -476,9 +461,7 @@ body{
       // padding:20px;
       // background:#111;
       li {
-        // width: 15vw;
-      width:12vw;
-        // height: 19.5vw;
+        width:12vw;
         height:15.6vw;
         position:relative;
         box-shadow:1.5px 1.5px 3px 3px #d2d2d2;
@@ -489,6 +472,7 @@ body{
         }
       }
     }
+    /* 슬라이드 뒤쪽 bar */
     .bar {
       width: 200vw;
       height: 100px;
@@ -510,9 +494,9 @@ body{
   .con4 {
     display: flex;
     background:#111;
+    /* 왼쪽 부분 */
     .con4-left {
       width: 30%;
-      // background: #f7f7fb;
       padding: 200px 3% 200px 0px;
       position: relative;
       .con4-left-inner {
@@ -604,8 +588,6 @@ body{
             height: 100%;
             border: 3px solid $green;
             position: absolute;
-            // background: rgba(255, 255, 255, 0.8);
-            // backdrop-filter: blur(10px);
             top: 15px;
             left: 15px;
             z-index: -20;
@@ -649,7 +631,7 @@ body{
 
           }
 
-          /* 오른쪽 가로 글씨 */
+          /* 오른쪽 세로 글씨 */
           .con4-content-list-title{
             color:#fff;
             opacity:0.8;
@@ -658,6 +640,7 @@ body{
             white-space:nowrap;
           }
           
+          /* 오른쪽 설명 */
           .con4-content-list-text {
             color:#fff;
             margin-left:5%;
@@ -699,7 +682,6 @@ body{
     padding:200px 0px 200px;
     position:relative;
     .con5-inner{
-      // width:65%;
       width:60%;
       margin:0px auto;
       >h2{
@@ -775,6 +757,7 @@ body{
           font-weight:900;
         }
       }
+      /* business 첫번째 항목 */
       .busi1-list{
         display:flex;
         justify-content:space-between;
@@ -789,7 +772,6 @@ body{
             transition:1s 0.6s;
           }
           &:nth-child(even){
-            // transform:translateY(50%);
             transform:translateY(60%);
             opacity:0;
             transition:1s 0.9s;
@@ -800,7 +782,7 @@ body{
         }
       }
       
-      /* 제휴 파트너 */
+      /* business 두번째 항목 */
       .busi2-list{
         display:flex;
         // justify-content:space-between;
@@ -830,7 +812,7 @@ body{
             transition:0.5s;
           }
 
-          /*크기*/
+          /* 크기변화 */
           &.on1{
             &:nth-of-type(1){
               width:70%;
@@ -877,7 +859,7 @@ body{
 
          
 
-          /* mouseover 하면 나타나는 배경 */
+          /* mouseover 하면 나타나는 불투명한 배경 */
           .white-bg{
             width:30px;
             height:30px;
@@ -893,6 +875,7 @@ body{
             transition:0.5s;
           }
 
+          /* 활성화 전 */
           .busi2-list-inner1{
             position:relative;
             z-index:10;
@@ -901,6 +884,8 @@ body{
               width:50%;
             }
           }
+
+          /* 활성화 후 */
           .busi2-list-inner2{
             position:relative;
             z-index:10;
@@ -953,7 +938,6 @@ body{
       }
       .con6-content-wrap{
         /* 해당 지점까지 스크롤 되면 video 줄어들고 내용 나옴 */
-        width:80%;
         width:70%;
         margin:0px auto;
         display:flex;
@@ -963,7 +947,6 @@ body{
           width:80%;
           height:600px;
           height:28vw;
-          
           border-radius:40px;
           overflow:hidden;
           transition:2s;
@@ -1044,13 +1027,8 @@ body{
       gap:20vw;
       position:relative;
       // align-items:end;
-      .con7-pic{
-        width:50vw;
-        position:absolute;
-        bottom:0px;
-        right:0%;
-        opacity:0.5;
-      }
+
+      /* 세로 타이틀 */
       .title-wrap{
         writing-mode: vertical-lr;
         opacity:0;
@@ -1063,6 +1041,7 @@ body{
           top:300px;
         }
       }
+
       .content-wrap{
         padding-top:5%;
         .content:nth-of-type(1){
@@ -1110,6 +1089,7 @@ body{
         
       }
     }
+    /* footer */
     .footer{
       color:#fff;
       padding:20px 30px;
@@ -1156,7 +1136,7 @@ body{
     background: rgba(255, 255, 255, 1);
     transition: 0.8s;
     span {
-      font-size: 18px;
+      font-size: 14px;
       color: #03c75a;
       font-weight: 700;
     }
@@ -1297,6 +1277,7 @@ body{
         }
       }
     }
+    /* 햄버거바 */
     .ham-wrap{
       width:40px;
       height:25px;
@@ -1416,17 +1397,6 @@ body{
       height: 100vh;
       object-fit: cover;
       position: relative;
-      &::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 20;
-        top: 0px;
-        left: 0px;
-        background: rgba(0, 0, 0);
-        /* 가상요소 적용되지 않음 */
-      }
     }
     /* 어두운 배경*/
     .bg {
@@ -1486,11 +1456,6 @@ body{
           border-radius: 30px;
           background: rgba(255, 255, 255, 1);
           transition: 0.8s;
-          span {
-            font-size: 18px;
-            color: #03c75a;
-            font-weight: 700;
-          }
           img {
             width: 20px;
             display: none;
@@ -1566,6 +1531,7 @@ body{
   /* 웹툰 슬라이드 con3 */
   .con3 {
     margin-bottom: 150px;
+    /* 웹툰 이미지 슬라이드 */
     ul {
       width: 200vw;
       display: flex;
@@ -1577,9 +1543,7 @@ body{
       // padding:20px;
       // background:#111;
       li {
-        // width: 15vw;
-      width:17vw;
-        // height: 19.5vw;
+        width:17vw;
         height:22vw;
         position:relative;
         box-shadow:1.5px 1.5px 3px 3px #d2d2d2;
@@ -1590,6 +1554,7 @@ body{
         }
       }
     }
+    /* 슬라이드 뒤쪽 bar */
     .bar {
       width: 300vw;
       height: 80px;
@@ -1611,9 +1576,9 @@ body{
   .con4 {
     display: flex;
     background:#111;
+    /* 왼쪽 부분 */
     .con4-left {
       width: 40%;
-      // background: #f7f7fb;
       padding: 200px 3% 200px 0px;
       position: relative;
       .con4-left-inner {
@@ -1630,7 +1595,6 @@ body{
         >p{
           font-size:24px;
           color:#555;
-          // transform:translateX(-17%);
           .con4-num{
             color:#03c75a;
           }
@@ -1705,8 +1669,6 @@ body{
             height: 100%;
             border: 3px solid $green;
             position: absolute;
-            // background: rgba(255, 255, 255, 0.8);
-            // backdrop-filter: blur(10px);
             top: 15px;
             left: 15px;
             z-index: -20;
@@ -1750,27 +1712,29 @@ body{
 
           }
 
-          /* 오른쪽 가로 글씨 */
+          /* 오른쪽 세로 글씨 */
           .con4-content-list-title{
             color:#fff;
             opacity:0.8;
             font-size: 20px;
             transform:rotate(90deg);
             white-space:nowrap;
+            display:none;
           }
           
+          /* 오른쪽 설명 */
           .con4-content-list-text {
             color:#fff;
-            margin-left:5%;
-            opacity:0;
-            transform:translateX(10%);
-            &.on{
-              opacity:1;
-              transform:translateX(0%);
-              transition:0.7s;
-            }
+            margin-left:8%;
+            // opacity:0;
+            // transform:translateX(10%);
+            // &.on{
+            //   opacity:1;
+            //   transform:translateX(0%);
+            //   transition:0.7s;
+            // }
             h4 {
-              font-size: 20px;
+              font-size: 18px;
               font-weight:800;
               span{
                 font-weight:600;
@@ -1800,7 +1764,6 @@ body{
     padding:150px 0px 200px;
     position:relative;
     .con5-inner{
-      // width:65%;
       width:75%;
       margin:0px auto;
       >h2{
@@ -1875,6 +1838,8 @@ body{
           font-weight:900;
         }
       }
+
+      /* business 첫번째 항목 */
       .busi1-list{
         display:flex;
         justify-content:space-between;
@@ -1900,10 +1865,9 @@ body{
         }
       }
       
-      /* 제휴 파트너 */
+      /* business 두번째 항목 */
       .busi2-list{
         display:flex;
-        // justify-content:space-between;
         border-radius:30px;
         justify-content:center;
         overflow:hidden;
@@ -1930,7 +1894,7 @@ body{
             transition:0.5s;
           }
 
-          /*크기*/
+          /* 크기 변화 */
           &.on1{
             &:nth-of-type(1){
               width:70%;
@@ -1966,7 +1930,6 @@ body{
           &.on .white-bg{
             width:100%;
             height: 100%;
-            // border-radius:100%;
             border-radius:0px;
             opacity:1;
           }
@@ -1977,7 +1940,7 @@ body{
 
          
 
-          /* mouseover 하면 나타나는 배경 */
+          /* mouseover 하면 나타나는  불투명한 배경 */
           .white-bg{
             width:30px;
             height:30px;
@@ -1993,6 +1956,7 @@ body{
             transition:0.5s;
           }
 
+          /* 활성화 전 */
           .busi2-list-inner1{
             position:relative;
             z-index:10;
@@ -2001,6 +1965,8 @@ body{
               width:50%;
             }
           }
+
+          /* 활성화 후 */
           .busi2-list-inner2{
             position:relative;
             z-index:10;
@@ -2042,14 +2008,14 @@ body{
     position:relative;
     height:3500px;
     background:#111;
+    padding:400px 0px 0px;
     .con6-inner{
-      height:100vh;
-      padding:200px 0px;
       position:sticky;
-      top:0px;
+      top:50%;
+      transform:translateY(-50%);
       >h2{
         width:70%;
-        margin:0px auto 100px;
+        margin:0px auto 80px;
         font-size: 55px;
         font-weight: 800;
         color:#fff;
@@ -2210,6 +2176,7 @@ body{
         
       }
     }
+    /* footer */
     .footer{
       color:#fff;
       padding:20px 30px;
@@ -2383,6 +2350,7 @@ body{
   /* header */
   header{
     width:100%;
+    overflow-x:hidden;
     padding:30px 30px;
     display:flex;
     justify-content:space-between;
@@ -2395,10 +2363,11 @@ body{
       padding-top:10px;
       a{
         img{
-          width:10vw;
+          width:8vw;
         }
       }
     }
+    /* 햄버거바 */
     .ham-wrap{
       width:30px;
       height:20px;
@@ -2454,7 +2423,6 @@ body{
     right:0px;
     z-index:80;
     transform:translate(90%,-95%)rotate(15deg);
-    // rotate(195deg);
     transition:0.5s;
     display:flex;
     justify-content:end;
@@ -2517,17 +2485,6 @@ body{
       height: 100vh;
       object-fit: cover;
       position: relative;
-      &::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 20;
-        top: 0px;
-        left: 0px;
-        background: rgba(0, 0, 0);
-        /* 가상요소 적용되지 않음 */
-      }
     }
     /* 어두운 배경*/
     .bg {
@@ -2679,6 +2636,7 @@ body{
     width: 100%;
     overflow:hidden;
     height:80vw;
+    /* 웹툰 이미지 슬라이드 */
     ul {
       width: 400vw;
       display: flex;
@@ -2689,9 +2647,7 @@ body{
       // padding:20px;
       // background:#111;
       li {
-        // width: 15vw;
-      width:32vw;
-        // height: 19.5vw;
+        width:32vw;
         height:44vw;
         position:relative;
         box-shadow:1.5px 1.5px 3px 3px #d2d2d2;
@@ -2702,6 +2658,7 @@ body{
         }
       }
     }
+    /* 슬라이드 뒤쪽 bar */
     .bar {
       width: 350vw;
       height: 70px;
@@ -2723,9 +2680,9 @@ body{
   .con4 {
     display: flex;
     background:#111;
+    /* con4 왼쪽 */
     .con4-left {
       width: 35%;
-      // background: #f7f7fb;
       padding: 150px 0px;
       position: relative;
       .con4-left-inner {
@@ -2817,8 +2774,6 @@ body{
             height: 100%;
             border: 3px solid $green;
             position: absolute;
-            // background: rgba(255, 255, 255, 0.8);
-            // backdrop-filter: blur(10px);
             top: 15px;
             left: 15px;
             z-index: -20;
@@ -2846,7 +2801,7 @@ body{
 
           }
 
-          /* 오른쪽 가로 글씨 */
+          /* 오른쪽 세로 글씨 */
           .con4-content-list-title{
             color:#fff;
             opacity:0.8;
@@ -2897,7 +2852,6 @@ body{
     padding:100px 0px;
     position:relative;
     .con5-inner{
-      // width:65%;
       width:80%;
       margin:0px auto;
       >h2{
@@ -2975,9 +2929,9 @@ body{
           display:none;
         }
       }
+      /* business 첫번째 항목 */
       .busi1-list{
         display:flex;
-        // justify-content:space-between;
         justify-content:center;
         flex-wrap:wrap;
         gap:5%;
@@ -3001,10 +2955,9 @@ body{
         }
       }
       
-      /* 제휴 파트너 */
+      /* business 두번째 항목 */
       .busi2-list{
         display:flex;
-        // justify-content:space-between;
         border-radius:30px;
         justify-content:center;
         overflow:hidden;
@@ -3031,7 +2984,7 @@ body{
             transition:0.5s;
           }
 
-          /*크기*/
+          /* 크기 변화 */
           &.on1{
             &:nth-of-type(1){
               width:70%;
@@ -3068,7 +3021,6 @@ body{
           &.on .white-bg{
             width:100%;
             height: 100%;
-            // border-radius:100%;
             border-radius:0px;
             opacity:1;
           }
@@ -3079,7 +3031,7 @@ body{
 
          
 
-          /* mouseover 하면 나타나는 배경 */
+          /* mouseover 하면 나타나는 불투명한 배경 */
           .white-bg{
             width:30px;
             height:30px;
@@ -3095,6 +3047,7 @@ body{
             transition:0.5s;
           }
 
+          /* 활성화 전 */
           .busi2-list-inner1{
             position:relative;
             z-index:10;
@@ -3103,6 +3056,8 @@ body{
               width:50%;
             }
           }
+
+          /* 활성화 후 */
           .busi2-list-inner2{
             position:relative;
             z-index:10;
@@ -3145,14 +3100,11 @@ body{
     position:relative;
     height:3500px;
     background:#111;
-    padding:500px 0px;
+    padding:500px 0px 0px;
     .con6-inner{
-      // height:100vh;
-      // padding:500px 0px;
       position:sticky;
       top:50%;
       transform:translateY(-50%);
-      // transform:translateY(-50%);
       >h2{
         width:70%;
         margin:0px auto 50px;
@@ -3327,6 +3279,7 @@ body{
         
       }
     }
+    /* footer */
     .footer{
       color:#fff;
       padding:10px 15px;
