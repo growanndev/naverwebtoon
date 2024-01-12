@@ -2823,6 +2823,7 @@ body{
             // }
             h4 {
               font-size: 15px;
+              font-size:2.5vw;
               font-weight:800;
               span{
                 font-weight:600;
@@ -2838,7 +2839,7 @@ body{
             }
             p {
               // font-size: 11px;
-              font-size:2vw;
+              font-size:2.2vw;
               transition:0.7s;
               opacity:0.8;
             }
@@ -3100,11 +3101,13 @@ body{
     position:relative;
     height:3500px;
     background:#111;
-    padding:500px 0px 0px;
+    // padding:500px 0px 0px;
     .con6-inner{
       position:sticky;
-      top:50%;
-      transform:translateY(-50%);
+      padding:250px 0px 0px;
+      top:0px;
+      // top:50%;
+      // transform:translateY(-50%);
       >h2{
         width:70%;
         margin:0px auto 30px;
