@@ -337,14 +337,14 @@ $(function(){
 
         /* 스크롤에 따라 service 순번 바뀜 */
 
-        if(scroll > service1 - 500){
+        if(scroll > service1 - 550){
             $('.con4-num').text('01');
         }
 
-        if(scroll > service2 - 500){
+        if(scroll > service2 - 550){
             $('.con4-num').text('02');
         }
-        if(scroll > service3 - 500){
+        if(scroll > service3 - 550){
             $('.con4-num').text('03');
         }
 
