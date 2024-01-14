@@ -25,11 +25,6 @@ a {
 }
 
 /* color */
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 body {
   overflow-x: hidden;
   width: 100%;
