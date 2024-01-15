@@ -94,6 +94,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    /* line-wrap */
   }
   .load-wrap .load-inner .load-text h2 {
     font-size: 10vw;
@@ -276,14 +277,14 @@ body {
     cursor: pointer;
   }
   .wrap .menu-wrap .menu-inner .menu-list li .line {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
     width: 0%;
     height: 30%;
     border-radius: 5px;
     background: #03c75a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0.8;
     transition: 0.5s;
     z-index: -2;
@@ -361,8 +362,8 @@ body {
     padding: 15px;
     display: flex;
     justify-content: center;
-    gap: 2vw;
     align-items: center;
+    gap: 2vw;
     border-radius: 30px;
     background: rgb(255, 255, 255);
     transition: 0.8s;
@@ -413,10 +414,10 @@ body {
     color: #111;
   }
   .wrap .con2 .con2-inner p {
+    height: 0px;
     font-size: 20px;
     text-align: center;
     color: #ccc;
-    height: 0px;
     overflow: hidden;
     transition: 1s;
   }
@@ -586,9 +587,9 @@ body {
     }
   }
   .wrap .con4 .con4-right .con4-content-list li .con4-content-list-box .arrow_img {
+    width: 6vw;
     position: absolute;
     bottom: -1vw;
-    width: 6vw;
     right: 0vw;
     opacity: 0;
     animation: go-right 0.8s infinite alternate;
@@ -2401,6 +2402,8 @@ body {
     transform: translateY(-50%);
   }
   .wrap .con2 .con2-inner h3 {
+    width: 95%;
+    margin: 0px auto;
     color: #ccc;
     text-align: center;
     font-size: 36px;
