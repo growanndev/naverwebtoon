@@ -2197,6 +2197,9 @@ body{
 @media all and (max-width: 767px) {
 
 
+  body{
+    width:95%;
+  }
   /* 공통 버튼 스타일 */
 .btn {
   display: flex;
@@ -2570,7 +2573,6 @@ body{
     height: 2400px;
     position: relative;
     padding: 200px 0px 0px;
-    overflow:hidden;
     .con2-inner {
       position: sticky;
       top: 50%;

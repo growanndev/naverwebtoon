@@ -2029,6 +2029,9 @@ body {
 /* 모바일 */
 /* 모바일 */
 @media all and (max-width: 767px) {
+  body {
+    width: 95%;
+  }
   /* 공통 버튼 스타일 */
   .btn {
     display: flex;
@@ -2396,7 +2399,6 @@ body {
     height: 2400px;
     position: relative;
     padding: 200px 0px 0px;
-    overflow: hidden;
   }
   .wrap .con2 .con2-inner {
     position: sticky;
