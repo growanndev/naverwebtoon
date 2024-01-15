@@ -2030,6 +2030,10 @@ body {
 /* 모바일 */
 @media all and (max-width: 767px) {
   /* 모바일 가로스크롤 방지 */
+  body {
+    width: 97%;
+    margin: 0px auto;
+  }
   /* 공통 버튼 스타일 */
   .btn {
     display: flex;
@@ -2073,7 +2077,7 @@ body {
   }
   /* 로딩 애니메이션 페이지 */
   .load-wrap {
-    width: 100%;
+    width: 97%;
     height: 100vh;
     background: #111;
     display: flex;
@@ -2158,7 +2162,7 @@ body {
     }
   }
   .load-wrap.hidden {
-    transform: translateX(-100%);
+    transform: translateX(-110%);
     transition: 1s ease-in-out;
   }
   /* wrap */
@@ -2176,8 +2180,8 @@ body {
     /* con7 : contact */
   }
   .wrap header {
-    width: 100%;
-    overflow-x: hidden;
+    width: 97%;
+    overflow: hidden;
     padding: 30px 30px;
     display: flex;
     justify-content: space-between;
@@ -2240,11 +2244,11 @@ body {
     width: 60%;
     height: 100vh;
     background: #03c75a;
-    position: fixed;
+    position: absolute;
     top: 0px;
-    right: 1%;
+    right: 0px;
     z-index: 80;
-    transform: translate(90%, -95%) rotate(15deg);
+    transform: translate(90%, -94.5%) rotate(15deg);
     transition: 0.5s;
     display: flex;
     justify-content: end;
@@ -2397,7 +2401,6 @@ body {
     height: 2400px;
     position: relative;
     padding: 200px 0px 0px;
-    overflow: hidden;
   }
   .wrap .con2 .con2-inner {
     width: 100%;
