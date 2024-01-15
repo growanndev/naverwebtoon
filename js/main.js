@@ -48,6 +48,10 @@ $(function(){
 
             $('body').css({backgroundColor:'#f2f2f2'});
 
+            $('header').css({
+                overflow:'visible'
+            });
+
             hamClick = 1;
         }
         else{
@@ -57,6 +61,15 @@ $(function(){
             },150)
 
             $('body').css({backgroundColor:'transparent'});
+
+
+            //모바일 header overflow 시간차
+            setTimeout(function(){
+                $('header').css({
+                    overflow:'hidden'
+                });
+            },400);
+            
 
             hamClick = 0;
         }
