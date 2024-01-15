@@ -2197,9 +2197,10 @@ body{
 @media all and (max-width: 767px) {
 
 /* 모바일 가로스크롤 방지 */
-  // body{
-  //   width:99%;
-  // }
+  body{
+    width:99%;
+    margin:0px auto;
+  }
   /* 공통 버튼 스타일 */
 .btn {
   display: flex;
@@ -2410,7 +2411,7 @@ body{
     background:#03c75a;
     position:fixed;
     top:0px;
-    right:0px;
+    right:1%;
     z-index:80;
     transform:translate(90%,-95%)rotate(15deg);
     transition:0.5s;
@@ -3276,7 +3277,7 @@ body{
       display:flex;
       justify-content:space-between;
       border-top:1px solid rgba(255,255,255,0.6);
-      font-size:14px;
+      font-size:12px;
       a{
         color:#fff;
       }
