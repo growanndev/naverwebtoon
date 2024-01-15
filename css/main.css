@@ -2029,9 +2029,6 @@ body {
 /* 모바일 */
 /* 모바일 */
 @media all and (max-width: 767px) {
-  body {
-    width: 90%;
-  }
   /* 공통 버튼 스타일 */
   .btn {
     display: flex;
@@ -2409,7 +2406,7 @@ body {
     margin: 0px auto;
     color: #ccc;
     text-align: center;
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 70px;
   }
   .wrap .con2 .con2-inner h3 .con2-text1.on {
