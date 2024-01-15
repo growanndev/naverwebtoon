@@ -2295,6 +2295,7 @@ body {
   .wrap .con1 {
     width: 100%;
     position: relative;
+    overflow: hidden;
     /* 어두운 배경*/
   }
   .wrap .con1 video {
@@ -2421,7 +2422,7 @@ body {
   .wrap .con2 .con2-inner p {
     width: 65%;
     margin: 0px auto;
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
     color: #ccc;
     height: 0px;
