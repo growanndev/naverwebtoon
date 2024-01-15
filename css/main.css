@@ -2029,6 +2029,9 @@ body {
 /* 모바일 */
 /* 모바일 */
 @media all and (max-width: 767px) {
+  body {
+    width: 90%;
+  }
   /* 공통 버튼 스타일 */
   .btn {
     display: flex;
