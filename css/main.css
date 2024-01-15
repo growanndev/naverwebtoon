@@ -2029,9 +2029,7 @@ body {
 /* 모바일 */
 /* 모바일 */
 @media all and (max-width: 767px) {
-  body {
-    width: 99%;
-  }
+  /* 모바일 가로스크롤 방지 */
   /* 공통 버튼 스타일 */
   .btn {
     display: flex;
@@ -2395,7 +2393,8 @@ body {
     color: #fff;
   }
   .wrap .con2 {
-    width: 100%;
+    width: 98%;
+    margin: 0px auto;
     height: 2400px;
     position: relative;
     padding: 200px 0px 0px;
