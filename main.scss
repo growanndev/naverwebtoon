@@ -2197,10 +2197,10 @@ body{
 @media all and (max-width: 767px) {
 
 /* 모바일 가로스크롤 방지 */
-  body{
-    width:97%;
-    margin:0px auto;
-  }
+  // body{
+  //   width:97%;
+  //   margin:0px auto;
+  // }
   /* 공통 버튼 스타일 */
 .btn {
   display: flex;
@@ -2575,6 +2575,8 @@ body{
     position: relative;
     padding: 200px 0px 0px;
     .con2-inner {
+      width:100%;
+      overflow:hidden;
       position: sticky;
       top: 50%;
       transform: translateY(-50%);
