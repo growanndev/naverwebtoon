@@ -2198,7 +2198,7 @@ body{
 
 /* 모바일 가로스크롤 방지 */
   body{
-    width:99%;
+    width:98%;
     margin:0px auto;
   }
   /* 공통 버튼 스타일 */
@@ -2570,8 +2570,7 @@ body{
   }
   /* con2 */
   .con2 {
-    width:98%;
-    margin:0px auto;
+    width:100%;
     height: 2400px;
     position: relative;
     padding: 200px 0px 0px;
@@ -2580,11 +2579,10 @@ body{
       top: 50%;
       transform: translateY(-50%);
       h3 {
-        width:95%;
         margin:0px auto;
         color: #ccc;
         text-align: center;
-        font-size: 28px;
+        font-size: 30px;
         margin-bottom: 70px;
         .con2-text1.on {
           color: #111;
