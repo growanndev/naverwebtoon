@@ -437,7 +437,7 @@ $(function(){
 
         /* con7 스크롤 효과 */
 
-        if(scroll > con7 - 300){
+        if(scroll > con7 - 500){
             $('.con7').addClass('on');
             setTimeout(function(){
                 $('.con7-inner .title-wrap h2').stop().animate({top:"0px"},500,"easeOutBounce");
