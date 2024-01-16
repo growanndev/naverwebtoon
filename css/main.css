@@ -2505,7 +2505,7 @@ body {
   }
   .wrap .con4 .con4-left {
     width: 35%;
-    padding: 150px 0px;
+    padding: 120px 0px;
     position: relative;
   }
   .wrap .con4 .con4-left .con4-left-inner {
@@ -2523,7 +2523,7 @@ body {
   }
   .wrap .con4 .con4-left .con4-left-inner > p {
     text-align: right;
-    font-size: 3vw;
+    font-size: 3.5vw;
     color: #555;
     transform: translateX(-24%);
   }
@@ -2532,7 +2532,7 @@ body {
   }
   .wrap .con4 .con4-right {
     width: 65%;
-    padding: 150px 0px 150px 10%;
+    padding: 120px 0px 120px 10%;
   }
   .wrap .con4 .con4-right .con4-content-list {
     perspective: 1000px;
@@ -2911,21 +2911,21 @@ body {
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 0px;
-    overflow: hidden;
-    transition: 1s;
     margin-top: 30px;
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap br {
     display: none;
   }
-  .wrap .con6 .con6-inner .con6-content-wrap .text-wrap.on {
-    height: 200px;
+  .wrap .con6 .con6-inner .con6-content-wrap .text-wrap.on p {
+    height: 100px;
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap p {
+    height: 0px;
+    overflow: hidden;
     color: #555;
     font-size: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    transition: 1s;
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap p .con6-text1.on {
     color: #fff !important;
