@@ -2086,7 +2086,7 @@ body {
     align-items: center;
     position: fixed;
     z-index: 200;
-    /* 숨기기 */
+    /* 로드화면 숨기기 */
   }
   .load-wrap .load-inner {
     width: 100%;
@@ -2416,7 +2416,7 @@ body {
     margin: 0px auto;
     color: #ccc;
     text-align: center;
-    font-size: 7vw;
+    font-size: 36px;
     margin-bottom: 70px;
   }
   .wrap .con2 .con2-inner h3 .con2-text1.on {
@@ -2431,7 +2431,7 @@ body {
   .wrap .con2 .con2-inner p {
     width: 65%;
     margin: 0px auto;
-    font-size: 2.4vw;
+    font-size: 13px;
     text-align: center;
     color: #ccc;
     height: 0px;
@@ -2645,14 +2645,14 @@ body {
     position: relative;
   }
   .wrap .con5 .con5-inner {
-    width: 80%;
+    width: 85%;
     margin: 0px auto;
     /* business1,2 효과 */
     /* business 첫번째 항목 */
     /* business 두번째 항목 */
   }
   .wrap .con5 .con5-inner > h2 {
-    font-size: 35px;
+    font-size: 37px;
     font-weight: 800;
     margin-bottom: 50px;
   }
@@ -2915,11 +2915,13 @@ body {
     overflow: hidden;
     transition: 1s;
     margin-top: 30px;
+    display: none;
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap br {
     display: none;
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap.on {
+    display: block;
     width: 80%;
   }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap p {
@@ -2967,7 +2969,7 @@ body {
     opacity: 1 !important;
   }
   .wrap .con7 .con7-inner {
-    padding: 150px 10% 150px 13%;
+    padding: 0px 10% 150px 13%;
     color: #fff;
     display: flex;
     justify-content: center;

@@ -2329,7 +2329,7 @@ body{
       }
     }
   }
-  /* 숨기기 */
+  /* 로드화면 숨기기 */
   &.hidden {
     transform: translateX(-110%);
     transition: 1s ease-in-out;
@@ -2587,7 +2587,7 @@ body{
         margin:0px auto;
         color: #ccc;
         text-align: center;
-        font-size: 7vw;
+        font-size: 36px;
         margin-bottom: 70px;
         .con2-text1.on {
           color: #111;
@@ -2602,7 +2602,7 @@ body{
       p {
         width:65%;
         margin:0px auto;
-        font-size: 2.4vw;
+        font-size: 13px;
         text-align: center;
         color: #ccc;
         height: 0px;
@@ -2845,10 +2845,10 @@ body{
     padding:100px 0px;
     position:relative;
     .con5-inner{
-      width:80%;
+      width:85%;
       margin:0px auto;
       >h2{
-        font-size: 35px;
+        font-size: 37px;
         font-weight: 800;
         margin-bottom:50px;
       }
@@ -3139,10 +3139,12 @@ body{
           overflow:hidden;
           transition:1s;
           margin-top:30px;
+          display:none;
           br{
             display:none;
           }
           &.on{
+            display:block;
             width:80%;
           }
           p{
@@ -3197,7 +3199,7 @@ body{
       opacity:1!important;
     }
     .con7-inner{
-      padding:150px 10% 150px 13%;
+      padding:0px 10% 150px 13%;
       color:#fff;
       display:flex;
       justify-content:center;
