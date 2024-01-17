@@ -2866,8 +2866,8 @@ body {
   }
   .wrap .con6 .con6-inner .con6-content-wrap .video-wrap {
     width: 60%;
-    height: 250px;
-    border-radius: 35px;
+    height: 200px;
+    border-radius: 40px;
     transition: 2s;
   }
   .wrap .con6 .con6-inner .con6-content-wrap .video-wrap.on {
