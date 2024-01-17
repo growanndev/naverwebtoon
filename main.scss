@@ -16,7 +16,7 @@ a {
 
 /* font */
 
-/* font weight: 300, 400, 700, 800
+/* 나눔스퀘어 font weight: 300, 400, 700, 800
 
 기본설정 700 */
 
@@ -29,11 +29,7 @@ a {
 $green: #03c75a;
 
 
-// html,body{
-//   width: 100%;
-//   overflow-x:hidden;
-// }
-
+/* 가로 스크롤 방지 */
 body{
   overflow-x:hidden;
   width:100%;
@@ -58,8 +54,8 @@ body{
     padding: 15px;
     display: flex;
     justify-content: center;
-    gap: 1vw;
     align-items: center;
+    gap: 1vw;
     border-radius: 30px;
     background: rgba(255, 255, 255, 1);
     transition: 0.8s;
@@ -78,6 +74,7 @@ body{
         }
       }
     }
+    /* 버튼 호버시 */
     &:hover {
       width: 18vw;
       background: #03c75a;
@@ -190,7 +187,7 @@ body{
   /* header */
   header{
     width:100%;
-    padding:50px 70px;
+    padding:40px 65px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -306,6 +303,8 @@ body{
           }
         }
       }
+
+      /* 메뉴페이지 활성화 */
       &.on{
       transform:translate(0,0) rotate(0deg);
       }
@@ -364,7 +363,6 @@ body{
         }
       }
       .btn {
-        display: flex;
         justify-content: end;
         padding-right: 4vw;
         transform: translateY(100%);
@@ -394,6 +392,7 @@ body{
               }
             }
           }
+          /* 버튼 호버시 */
           &:hover {
             width: 18vw;
             background: #03c75a;
@@ -502,25 +501,23 @@ body{
     background:#111;
     /* 왼쪽 부분 */
     .con4-left {
-      width: 30%;
-      padding: 200px 3% 200px 0px;
+      width: 40%;
+      padding: 200px 0px;
       position: relative;
       .con4-left-inner {
         position: sticky;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(5%,-50%);
+        text-align:center;
         h2 {
-          text-align:right;
           font-size: 60px;
           font-weight: 800;
           margin-bottom: 20px;
           color:#fff;
         }
         >p{
-          text-align:right;
           font-size:24px;
           color:#555;
-          transform:translateX(-17%);
           .con4-num{
             color:#03c75a;
           }
@@ -530,12 +527,11 @@ body{
     }
     /* service 오른쪽 콘텐츠 */
     .con4-right {
-      width: 70%;
+      width: 60%;
       padding: 200px 0px;
       .con4-content-list {
         perspective: 1000px;
         display: flex;
-        padding-top:200px;
         flex-direction: column;
         gap: 100px;
         li {
@@ -545,11 +541,25 @@ body{
           transform:translateX(5%);
           opacity:0;
           
+          /* 위치 지정 */
+          &:nth-of-type(1){
+            left:5%;
+          }
+          &:nth-of-type(2){
+            left:20%;
+          }
+          &:nth-of-type(3){
+            left:0%;
+          }
+
+
           &.on{
           transition:1s;
           transform:translateX(0%);
           opacity:1;
           }
+
+          /* 두번째 요소는 애니메이션 반대로 */
           &:nth-of-type(2){
             .con4-content-list-box{
               &::before{
@@ -573,11 +583,6 @@ body{
           align-items: center;
           position: relative;
           transition:1s;
-
-          &.on .arrow_img{
-            opacity:1;
-            transition:0.5s 0.3s;
-          }
 
           &.on .service_img{
             transform:scale(1.2);
@@ -613,22 +618,6 @@ body{
               }
             }
             
-          }
-
-
-          
-          .arrow_img{
-            width:6vw;
-            position:absolute;
-            bottom:-1vw;
-            right:0vw;
-            opacity:0;
-            animation:go-right 0.8s infinite alternate;
-            @keyframes go-right{
-              100%{
-                transform:translateX(15%);
-              }
-            }
           }
 
 
@@ -682,7 +671,7 @@ body{
   }
   /* con5 : business */
   .con5{
-    padding:200px 0px 200px;
+    padding:200px 0px;
     position:relative;
     .con5-inner{
       width:60%;
@@ -693,7 +682,7 @@ body{
         margin-bottom:100px;
       }
 
-      /* business1,2 효과 */
+      /* business1,2 스크롤 효과 */
       .business1{
         margin-bottom:50px;
         >p{
@@ -736,13 +725,13 @@ body{
           transition:1s 0.3s;
         }
       }
-      p{
+      .business>p{
         font-size:21px;
         &:nth-of-type(1){
-          margin:0px;
           display:flex;
           align-items:start;
         }
+        
         .num{
           display:inline-block;
           font-size:40px;
@@ -795,13 +784,69 @@ body{
         transform:translateY(10%);
         opacity:0;
         li{
-          height:22vw;
+          height:24vw;
           position:relative;
           display:flex;
           align-items:center;
           justify-content:center;
           z-index:10;
           transition:0.5s;
+
+           /* mouseover 하면 나타나는 불투명한 배경 */
+           .white-bg{
+            width:30px;
+            height:30px;
+            background:rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            border-radius:100px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            z-index:5;
+            opacity:0;
+            transition:0.5s;
+          }
+
+          /* 활성화 전 */
+          .busi2-list-inner1{
+            position:relative;
+            z-index:10;
+            text-align:center;
+            img{
+              width:50%;
+            }
+          }
+
+          /* 활성화 후 */
+          .busi2-list-inner2{
+            position:relative;
+            z-index:10;
+            text-align:center;
+            display:none;
+            >img{
+              width:50%;
+            }
+            .wid30{
+              width:30%;
+            }
+            p{
+              color:#111;
+              font-size:18px;
+              margin:3vw 0px;
+            }
+            .btn{
+              a{
+                width:50%;
+                
+                &:hover{
+                  width:60%;
+                }
+              }
+            }
+          }
+
+          /* 어두운 배경 가상요소 */
           &:after{
             content:'';
             width:100%;
@@ -860,59 +905,7 @@ body{
 
          
 
-          /* mouseover 하면 나타나는 불투명한 배경 */
-          .white-bg{
-            width:30px;
-            height:30px;
-            background:rgba(255,255,255,0.3);
-            backdrop-filter: blur(5px);
-            border-radius:100px;
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
-            z-index:5;
-            opacity:0;
-            transition:0.5s;
-          }
-
-          /* 활성화 전 */
-          .busi2-list-inner1{
-            position:relative;
-            z-index:10;
-            text-align:center;
-            img{
-              width:50%;
-            }
-          }
-
-          /* 활성화 후 */
-          .busi2-list-inner2{
-            position:relative;
-            z-index:10;
-            text-align:center;
-            display:none;
-            >img{
-              width:50%;
-            }
-            .wid30{
-              width:30%;
-            }
-            p{
-              color:#111;
-              font-size:18px;
-              margin:15% 0px;
-            }
-            .btn{
-              a{
-                width:50%;
-                
-                &:hover{
-                  width:60%;
-                }
-              }
-            }
-          }
+         
         }
 
       }
@@ -924,11 +917,11 @@ body{
     position:relative;
     height:3500px;
     background:#111;
+    padding-top:600px;
     .con6-inner{
-      height:100vh;
-      padding:150px 0px;
       position:sticky;
-      top:0px;
+      top:50%;
+      transform:translateY(-50%);
       >h2{
         width:70%;
         margin:0px auto 100px;
@@ -945,8 +938,7 @@ body{
         gap:10%;
         .video-wrap{
           width:80%;
-          height:600px;
-          height:28vw;
+          height:27vw;
           border-radius:40px;
           overflow:hidden;
           transition:2s;
@@ -1012,6 +1004,9 @@ body{
   .con7{
     width:100%;
     background:#111;
+
+
+    /* con7 스크롤 효과 */
     &.on .con7-inner .title-wrap{
       opacity:1;
     }
@@ -1026,7 +1021,6 @@ body{
       justify-content:center;
       gap:20vw;
       position:relative;
-      // align-items:end;
 
       /* 세로 타이틀 */
       .title-wrap{
@@ -1063,7 +1057,6 @@ body{
           margin-bottom:30px;
           
           .line{
-            width: 120%;
             width:100%;
             height:20%;
             border-radius:30px;
@@ -1150,6 +1143,8 @@ body{
         }
       }
     }
+
+    /* 버튼 호버 시 */ 
     &:hover {
       width: 18vw;
       background: #03c75a;
@@ -1261,7 +1256,7 @@ body{
   /* header */
   header{
     width:100%;
-    padding:30px 50px;
+    padding:30px 40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -1273,14 +1268,14 @@ body{
       padding-top:10px;
       a{
         img{
-          width:70px;
+          width:60px;
         }
       }
     }
     /* 햄버거바 */
     .ham-wrap{
-      width:40px;
-      height:25px;
+      width:35px;
+      height:22px;
       position:relative;
       z-index:100;
       cursor:pointer;
@@ -1291,7 +1286,7 @@ body{
       }
       li{
         width:100%;
-        height:5px;
+        height:3px;
         border-radius:10px;
         background:#fff;
         position:absolute;
@@ -1335,7 +1330,6 @@ body{
     z-index:80;
     transform:translate(45%,-98%)
     rotate(15deg);
-    // rotate(195deg);
     transition:0.5s;
     display:flex;
     justify-content:end;
@@ -1361,13 +1355,12 @@ body{
           font-size:35px;
           cursor:pointer;
           .line{
+            width:0%;
+            height:30%;
             position:absolute;
             top:50%;
             transform:translate(-50%,-50%);
-            // width: 105%;
             left:50%;
-            width:0%;
-            height:30%;
             border-radius:5px;
             background:#03c75a;
             opacity:0.8;
@@ -1379,6 +1372,8 @@ body{
           }
         }
       }
+
+      /* 메뉴 페이지 활성화 */
       &.on{
       transform:translate(0,0) rotate(0deg);
       }
@@ -1467,6 +1462,8 @@ body{
               }
             }
           }
+
+          /* 버튼 호버시 */
           &:hover {
             width: 30vw;
             background: #03c75a;
@@ -1485,7 +1482,7 @@ body{
   .con2 {
     height: 2400px;
     position: relative;
-    padding: 200px 0px 100px;
+    padding-top:200px;
     .con2-inner {
       position: sticky;
       top: 50%;
@@ -1506,14 +1503,13 @@ body{
         }
       }
       p {
-        font-size: 18px;
+        font-size: 17px;
         text-align: center;
         color: #ccc;
         height: 0px;
         overflow: hidden;
         transition: 1s;
         &.on {
-          // height:auto;
           height: 180px;
         }
         .con2-text4.on {
@@ -1531,14 +1527,16 @@ body{
 
   /* 웹툰 슬라이드 con3 */
   .con3 {
-    margin-bottom: 150px;
+    height:50vw;
+    overflow:hidden;
+    margin-bottom:50px;
     /* 웹툰 이미지 슬라이드 */
     ul {
       width: 200vw;
       display: flex;
       justify-content:center;
       gap: 1vw;
-      transform: rotate(6deg) translateX(-60%);
+      transform: rotate(6deg) translate(-60%,80%);
       position:relative;
       left:-400px;
       li {
@@ -1559,7 +1557,7 @@ body{
       height: 80px;
       background:#e6e6e6;
       box-shadow:1.5px 1.5px 4px 4px #f4f4f4;
-      transform: rotate(-15deg) translateX(-3%);
+      transform: rotate(-15deg) translate(-3%,180%);
       display: flex;
       align-items: center;
       position:relative;
@@ -1604,11 +1602,10 @@ body{
     /* service 오른쪽 콘텐츠 */
     .con4-right {
       width: 60%;
-      padding: 50px 0px 200px;
+      padding: 200px 0px;
       .con4-content-list {
         perspective: 1000px;
         display: flex;
-        padding-top:200px;
         flex-direction: column;
         gap: 100px;
         li {
@@ -1623,6 +1620,8 @@ body{
           transform:translateX(0%);
           opacity:1;
           }
+
+          /* 두번째 요소는 애니메이션 반대로 */
           &:nth-of-type(2){
             .con4-content-list-box{
               &::before{
@@ -1647,11 +1646,6 @@ body{
           align-items: center;
           position: relative;
           transition:1s;
-
-          &.on .arrow_img{
-            opacity:1;
-            transition:0.5s 0.3s;
-          }
 
           &.on .service_img{
             transform:scale(1.2);
@@ -1687,22 +1681,6 @@ body{
               }
             }
             
-          }
-
-
-          
-          .arrow_img{
-            position:absolute;
-            bottom:-1vw;
-            width:6vw;
-            right:0vw;
-            opacity:0;
-            animation:go-right 0.8s infinite alternate;
-            @keyframes go-right{
-              100%{
-                transform:translateX(15%);
-              }
-            }
           }
 
 
@@ -1761,7 +1739,7 @@ body{
         margin-bottom:60px;
       }
 
-      /* business1,2 효과 */
+      /* business1,2 스크롤 효과 */
       .business1{
         >p{
           transform:translateX(-40px);
@@ -1843,7 +1821,6 @@ body{
             transition:1s 0.6s;
           }
           &:nth-child(even){
-            // transform:translateY(50%);
             transform:translateY(60%);
             opacity:0;
             transition:1s 0.9s;
@@ -1871,63 +1848,7 @@ body{
           justify-content:center;
           z-index:10;
           transition:0.5s;
-          &:after{
-            content:'';
-            width:100%;
-            height: 100%;
-            position:absolute;
-            top:0px;
-            left:0px;
-            background:rgba(0,0,0,0.3);
-            z-index:0;
-            transition:0.5s;
-          }
 
-          /* 크기 변화 */
-          &.on1{
-            &:nth-of-type(1){
-              width:70%;
-            }
-            &:nth-of-type(2){
-              width:30%;
-            }
-          }
-          &.on2{
-            &:nth-of-type(1){
-              width:30%;
-            }
-            &:nth-of-type(2){
-              width:70%;
-            }
-          }
-          &:nth-of-type(1){
-            width:70%;
-            background:url(../img/business_bg_01.1.jpeg) no-repeat right/cover;
-          }
-          &:nth-of-type(2){
-            width:30%;
-            background:url(../img/business_bg_02-2.jpeg) no-repeat right/cover;
-          }
-
-          &.on .busi2-list-inner1{
-            display:none;
-          }
-          &.on .busi2-list-inner2{
-            display:block;
-          }
-
-          &.on .white-bg{
-            width:100%;
-            height: 100%;
-            border-radius:0px;
-            opacity:1;
-          }
-
-          &.on::after{
-            background:rgba(0,0,0,0.3);
-          }
-
-         
 
           /* mouseover 하면 나타나는  불투명한 배경 */
           .white-bg{
@@ -1986,6 +1907,67 @@ body{
               }
             }
           }
+
+          /* 어두운 배경 가상요소 */
+          &:after{
+            content:'';
+            width:100%;
+            height: 100%;
+            position:absolute;
+            top:0px;
+            left:0px;
+            background:rgba(0,0,0,0.3);
+            z-index:0;
+            transition:0.5s;
+          }
+
+          /* 크기 변화 */
+          &.on1{
+            &:nth-of-type(1){
+              width:70%;
+            }
+            &:nth-of-type(2){
+              width:30%;
+            }
+          }
+          &.on2{
+            &:nth-of-type(1){
+              width:30%;
+            }
+            &:nth-of-type(2){
+              width:70%;
+            }
+          }
+          &:nth-of-type(1){
+            width:70%;
+            background:url(../img/business_bg_01.1.jpeg) no-repeat right/cover;
+          }
+          &:nth-of-type(2){
+            width:30%;
+            background:url(../img/business_bg_02-2.jpeg) no-repeat right/cover;
+          }
+
+          &.on .busi2-list-inner1{
+            display:none;
+          }
+          &.on .busi2-list-inner2{
+            display:block;
+          }
+
+          &.on .white-bg{
+            width:100%;
+            height: 100%;
+            border-radius:0px;
+            opacity:1;
+          }
+
+          &.on::after{
+            background:rgba(0,0,0,0.3);
+          }
+
+         
+
+          
         }
 
       }
@@ -1997,7 +1979,7 @@ body{
     position:relative;
     height:3500px;
     background:#111;
-    padding:400px 0px 0px;
+    padding:500px 0px 0px;
     .con6-inner{
       position:sticky;
       top:50%;
@@ -2018,7 +2000,7 @@ body{
         gap:7%;
         .video-wrap{
           width:80%;
-          height:45vw;
+          height:42vw;
           border-radius:40px;
           overflow:hidden;
           transition:2s;
@@ -2047,6 +2029,7 @@ body{
             color:#555;
             font-size:22px;
             margin-bottom:80px;
+           
             .con6-text1.on{
               color:#fff!important;
               opacity:0.9;
@@ -2084,6 +2067,8 @@ body{
   .con7{
     width:100%;
     background:#111;
+
+    /* con7 스크롤에 따른 효과 */
     &.on .con7-inner .title-wrap{
       opacity:1;
     }
@@ -2098,14 +2083,13 @@ body{
       justify-content:center;
       gap:10vw;
       position:relative;
-      // align-items:end;
       .title-wrap{
         writing-mode: vertical-lr;
         opacity:0;
         transition:0.5s 0.3s;
         transform:rotate(180deg);
         h2{
-          font-size: 100px;
+          font-size: 120px;
           font-weight: 700; 
           position:relative;
           top:300px;
@@ -2132,7 +2116,6 @@ body{
           margin-bottom:20px;
           
           .line{
-            width: 120%;
             width:100%;
             height:20%;
             border-radius:30px;
@@ -2232,6 +2215,7 @@ body{
         }
       }
     }
+    /* 버튼 호버시 */
     &:hover {
       width: 18vw;
       background: #03c75a;
@@ -2442,13 +2426,12 @@ body{
           font-size:24px;
           cursor:pointer;
           .line{
+            width:0%;
+            height:30%;
             position:absolute;
             top:50%;
             transform:translate(-50%,-50%);
-            // width: 105%;
             left:50%;
-            width:0%;
-            height:30%;
             border-radius:5px;
             background:#03c75a;
             opacity:0.8;
@@ -2460,6 +2443,8 @@ body{
           }
         }
       }
+
+      /* 메뉴 페이지 활성화 */
       &.on{
       transform:translate(0,0) rotate(0deg);
       }
@@ -2601,18 +2586,17 @@ body{
       }
       p {
         width:65%;
+        height: 0px;
         margin:0px auto;
         font-size: 12px;
         text-align: center;
         color: #ccc;
-        height: 0px;
         overflow: hidden;
         transition: 1s;
         br{
           display:none;
         }
         &.on {
-          // height:auto;
           height: 230px;
         }
         .con2-text4.on {
@@ -2632,8 +2616,9 @@ body{
   .con3 {
     margin-bottom:0px;
     width: 100%;
-    overflow:hidden;
     height:80vw;
+    overflow:hidden;
+   
     /* 웹툰 이미지 슬라이드 */
     ul {
       width: 400vw;
@@ -2642,8 +2627,7 @@ body{
       gap: 1vw;
       transform: rotate(6deg) translate(-60%,45%);
       position:relative;
-      // padding:20px;
-      // background:#111;
+     
       li {
         width:32vw;
         height:44vw;
@@ -2680,26 +2664,23 @@ body{
     background:#111;
     /* con4 왼쪽 */
     .con4-left {
-      width: 35%;
+      width: 45%;
       padding: 120px 0px;
       position: relative;
       .con4-left-inner {
         position: sticky;
         top: 50%;
         transform: translateY(-50%);
+        text-align:center;
         h2 {
-          text-align:right;
-          font-size: 30px;
           font-size:6vw;
           font-weight: 800;
           margin-bottom: 20px;
           color:#fff;
         }
         >p{
-          text-align:right;
           font-size:3.5vw;
           color:#555;
-          transform:translateX(-24%);
           .con4-num{
             color:#03c75a;
           }
@@ -2709,16 +2690,14 @@ body{
     }
     /* service 오른쪽 콘텐츠 */
     .con4-right {
-      width: 65%;
-      padding: 120px 0px 120px 10%;
+      width: 55%;
+      padding: 120px 0%;
       .con4-content-list {
         perspective: 1000px;
         display: flex;
         flex-direction: column;
         gap: 80px;
         li {
-          // display:flex;
-          // align-items:center;
           position:relative;
           transform:translateX(5%);
           opacity:0;
@@ -2727,10 +2706,9 @@ body{
           transform:translateX(0%);
           opacity:1;
           }
-          // gap:20px;
+
+          /* 두번째 요소는 애니메이션 반대로 */
           &:nth-of-type(2){
-            // transform:translateX(20%);
-            // z-index:10;
             .con4-content-list-box{
               &::before{
                 animation-direction:alternate-reverse;
@@ -2755,10 +2733,6 @@ body{
           transition:1s;
           margin-bottom:50px;
 
-          &.on .arrow_img{
-            opacity:1;
-            transition:0.5s 0.3s;
-          }
 
           &.on .service_img{
             transform:scale(1.2);
@@ -2770,7 +2744,7 @@ body{
             content: "";
             width: 100%;
             height: 100%;
-            border: 3px solid $green;
+            border: 2px solid $green;
             position: absolute;
             top: 15px;
             left: 15px;
@@ -2851,7 +2825,7 @@ body{
         margin-bottom:50px;
       }
 
-      /* business1,2 효과 */
+      /* business1,2 스크롤 효과 */
       .business1{
         margin-bottom:50px;
         >p{
@@ -2894,7 +2868,7 @@ body{
           transition:1s 0.3s;
         }
       }
-      p{
+      .business>p{
         font-size:13px;
         &:nth-of-type(1){
           margin:0px;
@@ -2935,7 +2909,6 @@ body{
             transition:1s 0.6s;
           }
           &:nth-child(even){
-            // transform:translateY(50%);
             transform:translateY(10%);
             opacity:0;
             transition:1s 0.9s;
@@ -2963,6 +2936,64 @@ body{
           justify-content:center;
           z-index:10;
           transition:0.5s;
+
+          /* mouseover 하면 나타나는 불투명한 배경 */
+          .white-bg{
+            width:30px;
+            height:30px;
+            background:rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            border-radius:100px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            z-index:5;
+            opacity:0;
+            transition:0.5s;
+          }
+
+          /* 활성화 전 */
+          .busi2-list-inner1{
+            position:relative;
+            z-index:10;
+            text-align:center;
+            img{
+              width:50%;
+            }
+          }
+
+          /* 활성화 후 */
+          .busi2-list-inner2{
+            position:relative;
+            z-index:10;
+            text-align:center;
+            display:none;
+            >img{
+              width:40%;
+            }
+            .wid30{
+              width:30%;
+            }
+            p{
+              display:none;
+            }
+            .btn{
+              margin:5vw auto 0px;
+              a{
+                width:15vw;
+                padding:10px 0px;
+                span{
+                  font-size:12px;
+                }
+                &:hover{
+                  width:20vw;
+                }
+              }
+            }
+          }
+
+          /* 어두운 배경 가상요소 */
           &:after{
             content:'';
             width:100%;
@@ -3022,64 +3053,7 @@ body{
 
          
 
-          /* mouseover 하면 나타나는 불투명한 배경 */
-          .white-bg{
-            width:30px;
-            height:30px;
-            background:rgba(255,255,255,0.3);
-            backdrop-filter: blur(5px);
-            border-radius:100px;
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
-            z-index:5;
-            opacity:0;
-            transition:0.5s;
-          }
-
-          /* 활성화 전 */
-          .busi2-list-inner1{
-            position:relative;
-            z-index:10;
-            text-align:center;
-            img{
-              width:50%;
-            }
-          }
-
-          /* 활성화 후 */
-          .busi2-list-inner2{
-            position:relative;
-            z-index:10;
-            text-align:center;
-            display:none;
-            >img{
-              width:40%;
-            }
-            .wid30{
-              width:30%;
-            }
-            p{
-              color:#111;
-              font-size:14px;
-              margin:15% 0px;
-              display:none;
-            }
-            .btn{
-              margin:5vw auto 0px;
-              a{
-                width:15vw;
-                padding:10px 0px;
-                span{
-                  font-size:12px;
-                }
-                &:hover{
-                  width:20vw;
-                }
-              }
-            }
-          }
+          
         }
 
       }
@@ -3094,7 +3068,6 @@ body{
     padding-top:500px;
     .con6-inner{
       position:sticky;
-      // padding:30vw 0px 0px;
       top:50%;
       transform:translateY(-50%);
       >h2{
@@ -3114,8 +3087,8 @@ body{
         gap:10%;
         .video-wrap{
           width:60%;
-          height:200px;
-          border-radius:40px;
+          height:250px;
+          border-radius:35px;
           transition:2s;
           &.on{
             width:90%;
@@ -3129,14 +3102,11 @@ body{
           }
         }
         .text-wrap{
+          width:80%;
           display:flex;
           flex-direction:column;
           justify-content:center;
           align-items:center;
-          width:80%;
-          // height:0px;
-          // overflow:hidden;
-          // transition:1s;
           margin-top:30px;
           br{
             display:none;
@@ -3191,6 +3161,8 @@ body{
   .con7{
     width:100%;
     background:#111;
+
+    /* con7 스크롤 효과 */
     &.on .con7-inner .title-wrap{
       opacity:1;
     }
@@ -3198,6 +3170,7 @@ body{
       transform:translateX(0px)!important;
       opacity:1!important;
     }
+
     .con7-inner{
       padding:0px 10% 150px 13%;
       color:#fff;
@@ -3205,7 +3178,6 @@ body{
       justify-content:center;
       gap:10%;
       position:relative;
-      // align-items:end;
     
       .title-wrap{
         writing-mode: vertical-lr;
@@ -3241,7 +3213,6 @@ body{
           white-space:nowrap;
           
           .line{
-            width: 120%;
             width:100%;
             height:20%;
             border-radius:30px;
@@ -3286,14 +3257,7 @@ body{
         color:#fff;
       }
       .footer-list{
-        display:flex;
         display:none;
-        li{
-          padding:0px 10px;
-        }
-        li:not(:last-child){
-          border-right:1px solid rgba(255,255,255,0.6);
-        }
       }
     }
   }

@@ -5,16 +5,22 @@ $(function(){
 
     /* loading page, con1 이어지는 효과 */
 
+
+    /* 로딩 페이지 web 색상 변화 */
     setTimeout(function(){
         $('.white').stop().animate({
             color:'white'
         },500)
     },200);
 
+
+    /* 로딩 페이지 숨기기 */
     setTimeout(function(){
         $('.load-wrap').addClass('hidden');
     },1550)
 
+
+    /* con1 비디오 재생 */
     setTimeout(function(){
         $('video')[0].play();
     },2300)
@@ -46,8 +52,10 @@ $(function(){
             },150)
 
 
+            /* 메뉴페이지와 구별 위해 body 색상 변경 */
             $('body').css({backgroundColor:'#f2f2f2'});
 
+            /* 모바일 header */
             $('header').css({
                 overflow:'visible'
             });
@@ -92,7 +100,7 @@ $(function(){
     })
 
 
-    /* pc버전, con4 : service 마우스 올리면 나오는 효과 */
+    /* pc버전, con4 : service 마우스 올리면 세로 타이틀 사라지고 내용 나옴 */
 
     $(window).resize(function() {
         if($(window).width() > 1220) {
@@ -114,19 +122,24 @@ $(function(){
 
     
     
-    /* con5 : business 두번째 항목 mouseover 했을 때 */
-
-    $('.busi2-list li:nth-of-type(1)').mouseover(function(){
-        $('.busi2-list li').removeClass('on2');
-        $('.busi2-list li').addClass('on1');
-    })
-
-    $('.busi2-list li:nth-of-type(2)').mouseover(function(){
-        $('.busi2-list li').removeClass('on1');
-        $('.busi2-list li').addClass('on2');
-    })
+    /* con5 : business 두번째 항목
+    제휴 파트너 mouseover 했을 때 */
 
     $('.busi2-list li').mouseover(function(){
+        let idx = $(this).index();
+
+          /* 크기변화 */
+        if(idx == 0){
+        
+        $('.busi2-list li').removeClass('on2');
+        $('.busi2-list li').addClass('on1');
+        }else{
+
+        $('.busi2-list li').removeClass('on1');
+        $('.busi2-list li').addClass('on2');
+        }
+
+       /* 해당 요소 내용 활성화 */ 
         $('.busi2-list li').removeClass('on');
         $(this).addClass('on');   
     })
@@ -154,21 +167,28 @@ $(function(){
         let con7 = $('.con7').offset().top;
 
 
+
         /* 스크롤하면 헤더 나옴 */
         $('header').stop().animate({opacity:1},100);
 
-        /* 햄버거바 메뉴 누르면 해당하는 위치로 이동 */
+
+
+
+        /* 햄버거바 메뉴 페이지에서 메뉴 누르면 해당하는 위치로 이동 */
         $('.menu-list li').click(function(){
+            /* 메뉴페이지 들어감 */
             $('.ham-wrap').removeClass('on');
             $('.menu-inner').removeClass('on');
             setTimeout(function(){
                 $('.menu-wrap').removeClass('on');
             },150)
     
+            /* body 색상 되돌림 */
             $('body').css({backgroundColor:'transparent'});
     
             hamClick = 0;
     
+            /* 해당 위치로 이동 */
             let idx = $(this).index();
             if(idx == 0){
                 $('html').stop().animate({scrollTop:con2+'px'},1200);
@@ -191,7 +211,9 @@ $(function(){
     
         })
 
-        /* 햄버거바 색상 변화 */
+
+
+        /* 컨테이너 이동에 따른 햄버거바 색상 변화 */
 
         if(scroll < con2){
             $('.ham-wrap').removeClass('black');
@@ -265,7 +287,7 @@ $(function(){
 
 
 
-        /* con3 웹툰 슬라이드 */
+        /* con3 스크롤에 따라 웹툰 슬라이드 이동  */
 
         if(scroll > con3 - 1500 ){
             $('.slide1').css({
@@ -291,7 +313,7 @@ $(function(){
                 }
             } 
 
-            
+            /* 모바일 버전, 웹툰 슬라이드 */
             else if($(window).width() < 768) {
                 if(scroll > con3 - 1500 ){
                     $('.slide1').css({
@@ -307,39 +329,6 @@ $(function(){
         })
         .resize();
 
-
-
-
-        /* con4 service li 스크롤에 따라 오른쪽으로 */
-
-        //pc 
-        $(window).resize(function() {
-            if($(window).width() > 1220) {
-                if(scroll > con4 - 2000){
-                    $('.con4-content-list li').eq(0).css({
-                        left: scroll/16 + 'px'
-                    })
-                    $('.con4-content-list li').eq(1).css({
-                        left: scroll/12 + 'px'
-                    });
-        
-                    //13
-                    $('.con4-content-list li').eq(2).css({
-                        left: scroll/20 + 'px'
-                    })
-
-
-                    $('.con4-content-list-title').css({display:'block'})
-                    
-                }
-            }
-            else{
-                $('.con4-content-list li').css({
-                    left:'0px'
-                });
-            } 
-        })
-        .resize();
         
 
        
@@ -347,6 +336,7 @@ $(function(){
         let service1 = $('.service1').offset().top;
         let service2 = $('.service2').offset().top;
         let service3 = $('.service3').offset().top;
+
 
         /* 스크롤에 따라 service 순번 바뀜 */
 
@@ -362,6 +352,8 @@ $(function(){
         }
 
 
+        /* 스크롤에 따라 service 항목 나옴 */
+        
         if(scroll > service1 - 700){
             $('.service1').addClass('on');
            
