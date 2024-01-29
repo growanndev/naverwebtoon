@@ -983,6 +983,9 @@ body{
           .btn{
             a{
               width:14vw;
+              &:hover{
+                width:15vw;
+              }
             }
             transition:0.5s;
             transform:translateY(50%);
@@ -1077,6 +1080,9 @@ body{
           margin-top:45px;
           a{
             width:13vw;
+            &:hover{
+              width:15vw;
+            }
           }
         }
         

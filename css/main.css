@@ -921,6 +921,9 @@ body {
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap .btn a {
     width: 14vw;
   }
+  .wrap .con6 .con6-inner .con6-content-wrap .text-wrap .btn a:hover {
+    width: 15vw;
+  }
   .wrap .con6 .con6-inner .con6-content-wrap .text-wrap .btn.on {
     transform: translateY(0%);
     opacity: 1;
@@ -1001,6 +1004,9 @@ body {
   }
   .wrap .con7 .con7-inner .content-wrap .btn a {
     width: 13vw;
+  }
+  .wrap .con7 .con7-inner .content-wrap .btn a:hover {
+    width: 15vw;
   }
   .wrap .con7 .footer {
     color: #fff;
